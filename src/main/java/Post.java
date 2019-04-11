@@ -44,4 +44,12 @@ private LocalDateTime createdAt;
     public static Post findById(int id){
         return instances.get(id); //why minus 1? See if you can figure it out.
     }
+
+    public void update(String content) {
+        this.content = content;
+    }
+
+    public void deletePost(){
+        instances.remove(id); //same reason
+    }
 }
