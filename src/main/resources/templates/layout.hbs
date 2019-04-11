@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+{{#block "header"}}
+
+        <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ #block "title" }}Blog{{/block}}</title>
-
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <title>{{#block "title"}}Blog{{/block}}
+    </title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'/>
+    <link rel='stylesheet' href='/app.css'/>
 </head>
 <body>
-<!--begin main template-->
+{{/block}}
+
+<!-- begin inner template-->
 <div class="container">
-    {{ #block "content" }}
-    {{ /block }}
+    {{#block "content"}} {{/block}}
 
 </div>
-<!--end main template-->
-{{ #block "footer" }}
+<!-- end inner template-->
+{{#block "footer"}}
+
+
 </body>
 </html>
-        {{ /block }}
+        {{/block}}
